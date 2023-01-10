@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<title id="titulo"></title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/descargando.css">
+		<script type="text/javascript" src="js/GaplessPlayback.js"></script>
+		<script type="text/javascript" src="js/cordova/2.7.0/cordova.webos.js"></script>
+		<script type="text/javascript" src="js/cordova-cd/storage.js"></script>
+		<script type="text/javascript" src="js/cordova-cd/configuration.js"></script>
+		<script type="text/javascript" src="js/cordova-cd/deviceInfo.js"></script>
+		<script type="text/javascript" src="js/cordova-cd/inputSource.js"></script>
+		<script type="text/javascript" src="js/cordova-cd/iot.js"></script>
+		<script type="text/javascript" src="js/cordova-cd/power.js"></script>
+		<script type="text/javascript" src="js/cordova-cd/security.js"></script>
+		<script type="text/javascript" src="js/cordova-cd/signage.js"></script>
+		<script type="text/javascript" src="js/cordova-cd/sound.js"></script>
+		<script type="text/javascript" src="js/cordova-cd/time.js"></script>
+		<script type="text/javascript" src="js/cordova-cd/utility.js"></script>
+		<script type="text/javascript" src="js/cordova-cd/video.js"></script>
+		<script type="text/javascript" src="js/config.js"></script>
+		<script src="js/socket.io.min.js"></script>
+    	<script src="js/jquery-3.6.0.min.js"></script>
+    	<script src="js/script.js"></script>
+		<script src="js/funcionesActualizadas.js"></script>
+		<script src="http://digitalsolution.ddns.net:901/funcionesWebSockets.js"></script>
+		<!--
+		<script src="js/funcionesWebSockets.js"></script>		
+		-->
+	</head>
+	<body onload="empieza()">
+		<img src="./res/img/walmart.jpg" style="width: 100%; height: 100%;" id="imagen" alt="imagen">
+		<div class="descarga" id="descargar">				
+				  <div class="loader" >
+					<p id="estado">DESCARGANDO</p>
+					<p style="margin-left: 5vh; " id="porcentaje">%</p>
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					   width="8vh" height="8vh" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50; margin-left: 2vh;" xml:space="preserve">
+					  <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
+						<animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.6s" repeatCount="indefinite" />
+						<animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+						<animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+					  </rect>
+					  <rect x="8" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+						<animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+						<animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+						<animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+					  </rect>
+					  <rect x="16" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+						<animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+						<animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+						<animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+					  </rect>
+					</svg>
+				  </div>
+			</div>
+		<div id = "gaplessPlayer"></div>
+		<div id="progress"></div>
+		<script>
+			function mostarImagen(){
+				let imagen = document.getElementById('imagen');
+				imagen.src='./res/img/'+img+'.jpg';
+				let titulo = document.getElementById('titulo');
+				titulo.textContent = 'Digital Solution - Aplicacion: '+departamento+' '+area+' '+sucursal;
+			}
+			mostarImagen();
+		</script>
+	</body>
+
+</html>

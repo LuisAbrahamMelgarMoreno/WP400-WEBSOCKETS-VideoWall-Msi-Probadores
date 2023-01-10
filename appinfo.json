@@ -1,0 +1,10 @@
+{
+    "vendor": "Digital Solution",
+    "icon": "icon.png",
+    "main": "index.html",
+    "id": "com.lg.app.signage",
+    "inspectable":true,
+    "title": "Digital Solution",
+    "type": "web",
+    "version": "0.0.1"
+}

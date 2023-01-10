@@ -1,0 +1,35 @@
+.loader{
+    margin: 0 ;
+    height: 100px;
+    width: 20%;
+    text-align: center;
+    padding: 1em;
+    margin: 0 auto 1em;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+  }
+  
+  svg path,
+  svg rect{
+    margin: 0%;
+    fill: #3540d9;
+  }
+.descarga{
+    position: absolute;
+    top: .5vh;
+    /*width: 6vh;
+    height: 7vh;*/
+    right: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.descarga p{
+  margin: 0;
+  font-size: 1.5vh;
+  color:#3540d9
+}
+
